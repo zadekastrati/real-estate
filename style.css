@@ -1,0 +1,64 @@
+/* Remove spaces from the body tag */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* This class is used to add padding in the left and right of the element */
+.padding-lr-100 {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.padding-tb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+/* This class is used to add 30% width to an element */
+.w-33 {
+    width: 30%;
+}
+
+/* Styling for the first header section */
+.header1 {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: rgb(50, 60, 63);
+}
+
+.header1 .social-icons {
+    display: inline-block;
+}
+
+.social-icons a i {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.header1 .authentication {
+    float: right;
+    clear: both;
+}
+
+.header1 .authentication a {
+    color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.header1 .authentication a:first-child {
+    border-right: 2px solid white;
+}
