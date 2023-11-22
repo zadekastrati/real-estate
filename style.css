@@ -62,3 +62,38 @@ body {
 .header1 .authentication a:first-child {
     border-right: 2px solid white;
 }
+
+.header2 {
+    padding-top: 3px;
+    padding-bottom: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header2 .logo {
+    display: inline-block;
+}
+
+.header2 .logo img {
+    width: 100px;
+}
+
+.header2 .menu {
+    margin-top: 20px;
+    float: right;
+    clear: both;
+}
+
+.header2 .menu .active {
+    font-weight: bold;
+}
+
+.header2 .menu a {
+    padding: 20px 15px 0 0;
+    text-decoration: none;
+    color: #000;
+}
+
+.header2 .menu a:hover {
+    font-weight: bold;
+}
+
