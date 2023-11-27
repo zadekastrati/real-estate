@@ -46,7 +46,75 @@
         </div>
     </div>
 
+    <form>
+        <div class="form">
+            <div class="form-group">
+                <label for="name">First Name:</label>
+                <input type="text" id="name" name="name" placeholder="First Name">
+                <div id="nameError" class="error"></div>
+            </div>
 
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                <div id="lastnameError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                <div id="phoneError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+                <div id="usernameError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <div id="passwordError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="repeatPassword">Repeat password:</label>
+                <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Repeat Password">
+                <div id="repeatPasswordError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="birthday">Date of birth:</label>
+                <input type="date" id="birthday" name="birthday">
+                <div id="birthdayError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="my-select" id="gender" name="gender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <div id="genderError" class="error"></div>
+            </div>
+
+            <div class="signup-link">
+                <button type="submit">Register</button>
+                <!-- Link to Log in -->
+                <p> Already have an account? <a class="homepage" href="login.html">Log In.</a></p>
+                <!-- Link to homepage -->
+                <a class="homepage" href="index.html">Go to homepage</a>
+            </div>
+        </div>
+    </form>
 
 
     <footer class="padding-lr-100">
