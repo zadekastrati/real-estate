@@ -4,7 +4,6 @@ body {
     padding: 0;
 }
 
-/* This class is used to add padding in the left and right of the element */
 .padding-lr-100 {
     padding-right: 100px;
     padding-left: 100px;
@@ -19,12 +18,10 @@ body {
     height: 100vh;
 }
 
-/* This class is used to add 30% width to an element */
 .w-33 {
     width: 30%;
 }
 
-/* Styling for the first header section */
 .header1 {
     padding-top: 11px;
     padding-bottom: 11px;
