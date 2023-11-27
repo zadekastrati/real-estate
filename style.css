@@ -236,3 +236,11 @@ footer .footer-logo {
     color: #fff;
 }
     
+.map-container {
+    background-color: #fff;
+    padding-top: 50px;
+}
+
+.map iframe {
+    width: 100%;
+}
