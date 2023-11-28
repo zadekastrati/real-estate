@@ -352,3 +352,7 @@ button:active {
 .homepage:hover{
     text-decoration: underline;
 }
+
+.block{
+    display: block;
+}
