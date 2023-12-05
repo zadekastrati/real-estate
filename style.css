@@ -288,6 +288,14 @@ footer .footer-logo {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.my-select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 button {
     width: 50%;
@@ -355,4 +363,8 @@ button:active {
 
 .block{
     display: block;
+}
+
+.error{
+    color: red;
 }
