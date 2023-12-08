@@ -297,6 +297,7 @@ footer .footer-logo {
     box-sizing: border-box;
 }
 
+
 button {
     width: 50%;
     padding: 8px;
@@ -397,6 +398,9 @@ button:active {
     position: relative;
 }
 
+.slider-image{
+    width: 100%;
+}
 
 
 .banner2 {
@@ -425,4 +429,8 @@ button:active {
 .details-table table tr td {
     border: 1px solid #aaa;
     padding: 5px;
+}
+
+.slider-image{
+    padding-right: 30px;
 }
