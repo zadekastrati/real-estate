@@ -368,3 +368,61 @@ button:active {
 .error{
     color: red;
 }
+
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    background:none; 
+    color: white;
+    width: 50px; 
+    height: 50px;
+}
+
+.slider-btn:hover {
+    background: none;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#image-slider {
+    position: relative;
+}
+
+
+
+.banner2 {
+    position: relative;
+    background-color: #F7F7F7;
+    height: 34vh;
+    text-align: center;
+    margin-top: -22px;
+    margin-bottom: 40px;
+}
+
+.banner2 .title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.details-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 50px 20px;
+}
+
+.details-table table tr td {
+    border: 1px solid #aaa;
+    padding: 5px;
+}
