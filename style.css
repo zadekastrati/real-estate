@@ -455,6 +455,7 @@ button:active {
     align-items: center;
     justify-content: center;
 }
+<<<<<<< HEAD
 form{
     width: 90%;
     max-width: 600px;
@@ -484,3 +485,5 @@ label{
     color:#ccc;
     cursor:text;
 }
+=======
+>>>>>>> 35b92908ba840344b8d5ddb3f7f1bb75517318f8
