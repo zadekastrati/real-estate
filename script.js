@@ -84,8 +84,16 @@ document.addEventListener('DOMContentLoaded', function () {
 // Validation for the Login  form
 function validateLogInForm() {
     
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
-
-    validateInput(email, "Email", "emailError");
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
     
+        if (username === "" || password === "") {
+            alert("Please fill in all fields");
+            return false;
+        }
+    
+        // Additional validation logic can be added here
+    
+        return true;
+    }
