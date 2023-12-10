@@ -81,3 +81,19 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("nextBtn").addEventListener("click", nextImage);
     document.getElementById("prevBtn").addEventListener("click", prevImage);
 });
+// Validation for the Login  form
+function validateLogInForm() {
+    
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+    
+        if (username === "" || password === "") {
+            alert("Please fill in all fields");
+            return false;
+        }
+    
+        // Additional validation logic can be added here
+    
+        return true;
+    }
