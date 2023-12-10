@@ -458,4 +458,29 @@ button:active {
 form{
     width: 90%;
     max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+input,textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    color:#000;
+    background: transparent;
+    font-size: 15px;
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color:#ccc;
+    cursor:text;
 }
