@@ -288,6 +288,15 @@ footer .footer-logo {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.my-select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 
 button {
     width: 50%;
@@ -357,4 +366,96 @@ button:active {
     display: block;
 }
 
+<<<<<<< HEAD
 
+=======
+.error{
+    color: red;
+}
+
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    background:none; 
+    color: white;
+    width: 50px; 
+    height: 50px;
+}
+
+.slider-btn:hover {
+    background: none;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#image-slider {
+    position: relative;
+}
+
+.slider-image{
+    width: 100%;
+}
+
+
+.banner2 {
+    position: relative;
+    background-color: #F7F7F7;
+    height: 34vh;
+    text-align: center;
+    margin-top: -22px;
+    margin-bottom: 40px;
+}
+
+.banner2 .title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.details-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 50px 20px;
+}
+
+.details-table table tr td {
+    border: 1px solid #aaa;
+    padding: 5px;
+}
+
+.slider-image{
+    padding-right: 30px;
+}
+>>>>>>> f6d0c3ee6c7c347a67d29f90670a30eb41f6fabc
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+.conctactus{
+    width: 100%;
+    height: 100vh;
+    background-color: #F6F6F6;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 90%;
+    max-width: 600px;
+}

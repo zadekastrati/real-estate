@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="images/logo.png">
+    
 </head>
 
 <body>
@@ -50,7 +51,7 @@
         <!-- Title -->
         <h2 class="login-title">Sign Up</h2>
         <!-- Sign-up form -->
-        <form>
+        <form onsubmit="return validateSignUpForm()">
             <div class="form">
                 <div class="form-group">
                     <label for="name">First Name:</label>
@@ -121,7 +122,7 @@
         </form>
 
     </div>
-
+    <script src="script.js"></script>
 
     <footer class="padding-lr-100">
         <div class="footer1">
@@ -144,7 +145,7 @@
             </ul>
         </div>
         <div class="footer-logo">
-            <img src="assets/images/logo.png" alt="">
+            <img src="images/logo.png" alt="">
         </div>
     </footer>
     <div class="footer2">
