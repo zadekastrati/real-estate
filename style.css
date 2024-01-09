@@ -97,7 +97,7 @@ body {
 
 .banner {
     position: relative;
-    background-image: url('images/background.jpg');
+    background-image: url('assets/images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -140,7 +140,7 @@ body {
     align-items: center;
     margin-right: 41px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 18px;
 }
 
 .properties .property:hover {
@@ -241,116 +241,6 @@ footer .footer-logo {
 
 .map iframe {
     width: 100%;
-}
-
-
-.container1 {
-    background-color: #F6F6F6;
-    text-align: center;
-}
-
-.container1 .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-height: 100vh;
-    width: 700px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 20px auto;
-}
-
-
-.login-title {
-    margin-bottom: 20px;
-    text-align: center;
-    margin-top: 0;
-    padding-top: 100px;
-}
-
-.form-group {
-    color: #828180;
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 500px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.my-select {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-
-button {
-    width: 50%;
-    padding: 8px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-button:hover {
-    transform: scale(1.2);
-    background-color: #3e8e41;
-}
-
-button:active {
-    background-color: #3e8e41;
-}
-
-.container1 .form2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 50vh;
-    width: 700px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 20px 400px;
-}
-
-.authentication .active2 {
-    font-weight: bold;
-}
-
-.authentication a:hover {
-    font-weight: bold;
-}
-
-.signup-link {
-    margin-top: 10px;
-}
-
-.signup-link a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
 }
 
 .homepage{
