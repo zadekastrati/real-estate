@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     var imageUrls = [
-        "images/slide1.jpg",
-        "images/slide2.jpg",
-        "images/slide3.jpg",
+        "assets/images/slide1.jpg",
+        "assets/images/slide2.jpg",
+        "assets/images/slide3.jpg",
     ];
 
     var sliderContainer = document.getElementById("image-slider");

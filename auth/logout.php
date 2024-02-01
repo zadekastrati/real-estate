@@ -2,7 +2,7 @@
 session_start();
 
 // Unset all session variables
-$_SESSION = array();
+unset($_SESSION["user"]);
 
 // Destroy the session
 session_destroy();

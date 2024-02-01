@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -27,10 +30,16 @@
                 <i class="fa-brands fa-twitter"></i>
             </a>
         </div>
-        <div class="authentication">
-            <a href="auth/login.php"><i class="fa-solid fa-right-to-bracket"></i> Log In</a>
-            <a href="auth/register.php"><i class="fa-solid fa-user-plus"></i> Sign Up </a>
-        </div>
+        <?php if (!isset($_SESSION['user'])) { ?>
+            <div class="authentication">
+                <a href="auth/login.php"><i class="fa-solid fa-right-to-bracket"></i> Log In</a>
+                <a href="auth/register.php"><i class="fa-solid fa-user-plus"></i> Sign Up </a>
+            </div>
+        <?php } else { ?>
+            <div class="authentication" style="color: white;">
+                <?php echo $_SESSION['user']['name']; ?>
+            </div>
+        <?php } ?>
     </div>
     <!-- Header Section 2 -->
     <div class="header2 padding-lr-100">
@@ -40,6 +49,9 @@
             </a>
         </div>
         <div class="menu">
+            <?php if (isset($_SESSION['user'])) { ?>
+                <a href="admin/admin_dashboard.php">Dashboard</a>
+            <?php } ?>
             <!-- Navigation links -->
             <a href="index.php"
                 class="<?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active' : ''; ?>">Home</a>

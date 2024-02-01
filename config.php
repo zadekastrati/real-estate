@@ -1,5 +1,5 @@
 <?php
-$hostname = "localhost"; // Usually "localhost" if the database is on the same server
+$hostname = "localhost";
 $username = "root";
 $password = "";
 $database = "real_estate";

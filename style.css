@@ -297,15 +297,15 @@ footer .footer-logo {
 .banner2 {
     position: relative;
     background-color: #F7F7F7;
-    height: 34vh;
+    height: 20vh;
     text-align: center;
-    margin-top: -22px;
+    margin-top: 10px;
     margin-bottom: 40px;
 }
 
 .banner2 .title {
     position: relative;
-    top: 50%;
+    top:50%;
     transform: translateY(-50%);
 }
 

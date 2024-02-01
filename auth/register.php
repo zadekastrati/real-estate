@@ -46,7 +46,7 @@ $conn->close();
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">Sign up as Admin</h2>
                         <form method="POST" class="register-form" id="register-form" onsubmit="validateSignUpForm()">
                             <div class="form-group">
                                 <label for="name"><i class="fa fa-user"></i></label>
@@ -84,7 +84,8 @@ $conn->close();
                     </div>
                     <div class="signup-image">
                         <figure><img src="../assets/images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="login.php" class="signup-image-link">I am already a member</a>
+                        <a href="login.php" class="signup-image-link">I am already a member!</a>
+                        <a href="../../users/auth/register.php">Register as user</a>
                     </div>
                 </div>
             </div>

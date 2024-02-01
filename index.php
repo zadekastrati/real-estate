@@ -1,4 +1,6 @@
-<?php include_once('includes/header.php'); ?>
+<?php 
+include_once('includes/header.php'); 
+?>
 
 <div class="banner">
     <h1 class="title">Where everyday is golden!</h1>

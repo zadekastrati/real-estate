@@ -1,3 +1,13 @@
+<?php
+session_start();
+require_once("../config/login.php");
+if (isset($_POST["signin"])) {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $loginObject = new Login();
+    $loginObject->login($email, $password);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="../assets/images/logo.png">
-    <title>Sign Up Form - Gold Abodes</title>
+    <title>Sign In Form - Gold Abodes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Main css -->
     <link rel="stylesheet" href="../assets/css/login.css">
@@ -25,7 +35,13 @@
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">Sign in</h2>
+                        <?php if (isset($_SESSION['loginError'])) { ?>
+                            <p class="errorAlert" style="color: red;">
+                                <?php echo $_SESSION['loginError'] ?>
+                            </p>
+                            <?php unset($_SESSION['loginError']); ?>
+                        <?php } ?>
                         <form method="POST" class="register-form" id="login-form" onsubmit="validateLogInForm()">
                             <div class="form-group">
                                 <label for="email"><i class="fa fa-envelope"></i></label>
@@ -47,7 +63,8 @@
                         </form>
                         <div class="social-login">
                             <ul class="socials">
-                                <li><a href="register.php" class="signup-image-link">Don't have an account?</a></li>
+                                <li><a href="register.php" class="signup-image-link">Don't have an account? Sign up</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
