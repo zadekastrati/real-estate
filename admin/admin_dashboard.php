@@ -16,6 +16,9 @@ session_start();
         <a href="../index.php" class="logo">
             <img src="../assets/images/logo.png" style="width: 100px;">
         </a>
+        <div class="authentication" style="margin-right: 20px;">
+            <a href="../auth/logout.php" style="color: #000; text-decoration: none;">Log out</a>
+        </div>
     </div>
 
     <nav>
@@ -26,9 +29,12 @@ session_start();
         <?php } ?>
         <a href="admin_dashboard.php" style="margin-top:20px ;">Dashboard</a>
         <a href="admin_properties.php">Properties</a>
-        <a href="admin_users.php">Users</a>
+        <?php
+        if ($_SESSION['user']['role'] == 'admin' || $_SESSION['user']['role'] == 'superadmin') {
+            echo '<a href="admin_users.php">Users</a>';
+        }
+        ?>
         <a href="admin_contact.php">Contact Us</a>
-        <a href="../auth/logout.php" style="margin-top: 160%;">Log out</a>
     </nav>
 
     <div class="main">

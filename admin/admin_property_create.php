@@ -3,17 +3,19 @@ session_start();
 require_once('../config/property.php');
 
 $propertyObject = new Property();
-
-if(isset($_SESSION['user'])) {
+if (isset($_SESSION['user'])) {
     if (isset($_POST['createProperty'])) {
-        $propertyObject->create($_POST['title']);    
+        $propertyObject->create($_POST['title'], $_POST['price'], $_POST['description'], $_FILES['photo']);
+
         header("Location: admin_properties.php");
+        exit();
     }
 } else {
     header("Location: ../auth/login.php");
     exit();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +32,9 @@ if(isset($_SESSION['user'])) {
         <a href="../index.php" class="logo">
             <img src="../assets/images/logo.png" style="width: 100px;">
         </a>
+        <div class="authentication" style="margin-right: 20px;">
+            <a href="../auth/logout.php" style="color: #000; text-decoration: none;">Log out</a>
+        </div>
     </div>
 
     <nav>
@@ -40,17 +45,28 @@ if(isset($_SESSION['user'])) {
         <?php } ?>
         <a href="admin_dashboard.php" style="margin-top:20px ;">Dashboard</a>
         <a href="admin_properties.php">All Properties</a>
-        <a href="../index.php">Home</a>
-        <a href="../category-details.php">Properties</a>
-        <a href="users.php">Users</a>
-        <a href="admin_contact.php">Contact Us</a>
-        <a href="../auth/logout.php" style="margin-top: 160%;">Log out</a>
+        <?php
+        if ($_SESSION['user']['role'] == 'admin' || $_SESSION['user']['role'] == 'superadmin') {
+            echo '<a href="admin_users.php">Users</a>';
+        }
+        ?> <a href="admin_contact.php">Contact Us</a>
     </nav>
     <div class="main">
         <div class="tableRow">
-            <form method="POST">
-                <label for="name">Property name</label>
-                <input type="text" name="title">
+            <form method="POST" enctype="multipart/form-data">
+                <h2>Add Property</h2>
+                <label for="title">Title</label>
+                <input type="text" name="title" required>
+
+                <label for="price">Price</label>
+                <input type="number" name="price" required>
+
+                <label for="description">Description</label>
+                <textarea name="description" required></textarea>
+
+                <label for="photo">Property Photo</label>
+                <input type="file" name="photo" accept="image/*" required>
+
                 <button type="submit" name="createProperty">Create</button>
             </form>
         </div>

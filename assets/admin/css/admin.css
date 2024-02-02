@@ -6,7 +6,6 @@ body {
 }
 
 .Header {
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,4 +157,15 @@ nav a:hover {
     border: 1px solid #000;
     font-weight: bold;
     margin: 0px 20px;
+}
+
+.form-group {
+    width: 98%;
+    padding-bottom: 20px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    width: 100%;
 }

@@ -23,6 +23,7 @@ if (isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/admin/css/admin.css">
     <title>Properties</title>
 </head>
@@ -45,13 +46,16 @@ if (isset($_SESSION['user'])) {
         <?php } ?>
         <a href="admin_dashboard.php" style="margin-top:20px ;">Dashboard</a>
         <a href="admin_properties.php">Properties</a>
-        <a href="admin_users.php">Users</a>
-        <a href="admin_contact.php">Contact Us</a>
+        <?php
+        if ($_SESSION['user']['role'] == 'admin' || $_SESSION['user']['role'] == 'superadmin') {
+            echo '<a href="admin_users.php">Users</a>';
+        }
+        ?> <a href="admin_contact.php">Contact Us</a>
     </nav>
     <div class="main">
         <?php if (isset($_SESSION['propertyCreationError'])) { ?>
             <p class="propertyAlert" style="color: red;">
-                <?php echo $_SESSION['propertyCreationSuccess']; ?>
+                <?php echo $_SESSION['propertyCreationError']; ?>
             </p>
             <?php unset($_SESSION['propertyCreationError']); ?>
         <?php } elseif (isset($_SESSION['propertyCreationSuccess'])) { ?>
@@ -82,7 +86,7 @@ if (isset($_SESSION['user'])) {
                                 <tr>
                                     <td>
                                         <img src="../uploads/<?php echo $property['photo']; ?>" class="pr-4" alt=""
-                                            style="width: 150px;">
+                                            style="width: 100px;">
                                     </td>
                                     <td>
                                         <?php echo $property['title']; ?>
@@ -95,8 +99,8 @@ if (isset($_SESSION['user'])) {
                                     </td>
                                     <td>
                                         <a href="admin_edit_property.php?property_id=<?php echo $property['id']; ?>">
-                                            <i class="fa fa-pencil pl-2 pr-3 edit"
-                                                style="cursor: pointer; color: black;"></i>
+                                            <i class="fa fa-pencil"
+                                                style="cursor: pointer; color: black; padding-right: 15px;"></i>
                                         </a>
                                         <a href="admin_delete_property.php?property_id=<?php echo $property['id']; ?>"><i
                                                 class="fa fa-trash" style="cursor: pointer; color: black;"></i></a>
