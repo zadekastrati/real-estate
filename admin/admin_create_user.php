@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addUser'])) {
 
 <body>
     <div class="Header">
-        <a href="../index.php" class="logo">
+        <a href="../index.php" target="_blank" class="logo">
             <img src="../assets/images/logo.png" style="width: 100px;">
         </a>
         <div class="authentication" style="margin-right: 20px;">

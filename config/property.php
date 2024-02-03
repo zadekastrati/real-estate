@@ -28,8 +28,9 @@ class Property extends Connection
     }
     public function create($title, $price, $description, $photo)
     {
+        $timestamp = (new DateTime())->getTimestamp();
         $targetDirectory = "../uploads/"; 
-        $targetFile = $targetDirectory . basename($_FILES["photo"]["name"]);
+        $targetFile = $targetDirectory . $timestamp . basename($_FILES["photo"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
     
@@ -43,11 +44,6 @@ class Property extends Connection
     
         if (file_exists($targetFile)) {
             $_SESSION['propertyCreationError'] = "Sorry, file already exists.";
-            $uploadOk = 0;
-        }
-    
-        if ($_FILES["photo"]["size"] > 500000) {
-            $_SESSION['propertyCreationError'] = "Sorry, your file is too large.";
             $uploadOk = 0;
         }
     
@@ -76,5 +72,51 @@ class Property extends Connection
         }
     }
     
-    
+    public function editProperty($id, $title, $price, $description, $photo)
+    {
+        if (!$this->propertyExists($id)) {
+            return "Property not found";
+        }
+
+        $stmt = $this->connection->prepare("UPDATE properties SET title = ?, price = ?, description = ?, photo = ? WHERE id = ?");
+        $stmt->bind_param("ssssi", $title, $price, $description, $photo, $id);
+
+        if ($stmt->execute()) {
+            $stmt->close();
+            return [
+                'message' => "Property updated successfully",
+                'status' => 200
+            ];
+        } else {
+            [
+                'message' => "Error updating property: " . $stmt->error,
+                'status' => 404
+            ];
+        }
+    }
+
+    private function propertyExists($id)
+    {
+        $stmt = $this->connection->prepare("SELECT * FROM properties WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        return $result->num_rows > 0;
+    }
+    public function getProperty($property_id)
+    {
+        $stmt = $this->connection->prepare("SELECT * FROM properties WHERE id = ?");
+        $stmt->bind_param("i", $property_id);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc();
+        } else {
+            return false;
+        }
+    }
 }

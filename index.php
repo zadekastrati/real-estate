@@ -19,8 +19,7 @@ include_once('includes/header.php');
             <a href="property.php" class="title">Isles Estates Phase II</a>
             <div class="price">220 000 &euro;</div>
             <div class="description">
-                <i class="fa-solid fa-bed"> </i> 5 |
-                <i class="fa-solid fa-bath"> </i> 5 | 5,937 Sq Ft
+            <i class="fa-regular fa-heart add-to-cart" style="cursor: pointer;"></i>
             </div>
         </div>
         <div class="footer"></div>
@@ -33,8 +32,7 @@ include_once('includes/header.php');
             <a href="property.php" class="title">West Point Residence</a>
             <div class="price">320 000 &euro;</div>
             <div class="description">
-                <i class="fa-solid fa-bed"> </i> 4 |
-                <i class="fa-solid fa-bath"> </i> 5 | 4,937 Sq Ft
+            <i class="fa-regular fa-heart add-to-cart" style="cursor: pointer;"></i>
             </div>
         </div>
         <div class="footer"></div>
@@ -47,8 +45,7 @@ include_once('includes/header.php');
             <a href="property.php" class="title">The Enclave</a>
             <div class="price">500 000 &euro;</div>
             <div class="description">
-                <i class="fa-solid fa-bed"></i> 4 |
-                <i class="fa-solid fa-bath"> </i> 4 | 3,391 Sq Ft
+            <i class="fa-regular fa-heart add-to-cart" style="cursor: pointer;"></i>
             </div>
         </div>
         <div class="footer"></div>
@@ -66,4 +63,5 @@ include_once('includes/header.php');
         height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+<script src="assets\js\script.js"></script>
 <?php include_once('includes/footer.php'); ?>

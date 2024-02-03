@@ -8,14 +8,11 @@ if (isset($_SESSION['user'])) {
     $role = $_SESSION['user']['role'];
     if ($role == 'superadmin' || $role == 'admin') {
         $users = $userObject->userList();
-    } else {
-        $users = $userObject->userList($_SESSION['user']['id']);
     }
 } else {
     header("Location: ../auth/login.php");
     exit();
 }
-?>
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +28,7 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <div class="Header" style="height: 10%;">
-        <a href="../index.php" class="logo">
+        <a href="../index.php" target="_blank" class="logo">
             <img src="../assets/images/logo.png" style="width: 100px;">
         </a>
         <div class="authentication" style="margin-right: 20px;">
@@ -86,7 +83,7 @@ if (isset($_SESSION['user'])) {
                                             <i class="fa fa-pencil pl-2 pr-3 edit"
                                                 style="cursor: pointer; color: black;"></i>
                                         </a>
-                                        <a href="delete_user.php?user_id=<?php echo $user['id']; ?>">
+                                        <a href="admin_delete_user.php?user_id=<?php echo $user['id']; ?>">
                                             <i class="fa fa-trash" style="cursor: pointer; color: black;"></i>
                                         </a>
                                     </td>

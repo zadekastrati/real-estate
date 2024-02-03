@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Other code for displaying the form and retrieving user details for editing
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div class="Header">
-        <a href="../index.php" class="logo">
+        <a href="../index.php" target="_blank" class="logo">
             <img src="../assets/images/logo.png" style="width: 100px;">
         </a>
         <div class="authentication" style="margin-right: 20px;">
@@ -70,20 +69,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php unset($_SESSION['userCreationSuccess']); ?>
         <?php } ?>
         <div class="tableRow">
-            <h2>Edit User</h2>
-            <form method="POST">
-                <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                <label for="name">Name</label>
-                <input type="text" name="name" value="<?php echo $user['name']; ?>" required>
-
-                <label for="email">Email</label>
-                <input type="email" name="email" value="<?php echo $user['email']; ?>" required>
-
-                <label for="password">Password</label>
-                <input type="password" name="password" required>
-
-                <button class="createProperty" type="submit" name="editUser">Edit User</button>
-            </form>
+            <div class="padding" style="padding:20px;">
+                <h2>Edit User</h2>
+                <form method="POST">
+                    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" value="<?php echo $user['name']; ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" value="<?php echo $user['email']; ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <button class="createProperty" type="submit" name="editUser">Edit User</button>
+                </form>
+            </div>
         </div>
 
     </div>

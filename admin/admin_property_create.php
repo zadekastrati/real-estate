@@ -29,7 +29,7 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <div class="Header">
-        <a href="../index.php" class="logo">
+        <a href="../index.php" target="_blank" class="logo">
             <img src="../assets/images/logo.png" style="width: 100px;">
         </a>
         <div class="authentication" style="margin-right: 20px;">
@@ -54,20 +54,26 @@ if (isset($_SESSION['user'])) {
     <div class="main">
         <div class="tableRow">
             <form method="POST" enctype="multipart/form-data">
-                <h2>Add Property</h2>
-                <label for="title">Title</label>
-                <input type="text" name="title" required>
-
-                <label for="price">Price</label>
-                <input type="number" name="price" required>
-
-                <label for="description">Description</label>
-                <textarea name="description" required></textarea>
-
-                <label for="photo">Property Photo</label>
-                <input type="file" name="photo" accept="image/*" required>
-
-                <button type="submit" name="createProperty">Create</button>
+                <div class="padding" style="padding: 20px">
+                    <h2>Add Property</h2>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" name="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Property Photo</label>
+                        <input type="file" name="photo" accept="image/*" required>
+                    </div>
+                    <button class="createProperty" type="submit" name="createProperty">Create</button>
+                </div>
             </form>
         </div>
     </div>

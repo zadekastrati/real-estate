@@ -30,7 +30,7 @@ $properties = $conn->query($sql)->fetch_all(MYSQLI_ASSOC);
                 <div class="description">
                     <?php echo $property['description']; ?>
                 </div>
-                <i class="fa-regular fa-heart add-to-cart" style="cursor: pointer;"
+                <i class="fa-regular fa-heart add-to-cart" style="cursor: pointer; padding-left: 10px; "
                     data-product-id="<?php echo $property['id']; ?>"></i>
             </div>
             <div class="footer"></div>

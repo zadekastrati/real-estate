@@ -30,7 +30,7 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <div class="Header">
-        <a href="../index.php" class="logo">
+        <a href="../index.php" target="_blank" class="logo">
             <img src="../assets/images/logo.png" style="width: 100px;">
         </a>
         <div class="authentication" style="margin-right: 20px;">
@@ -63,6 +63,17 @@ if (isset($_SESSION['user'])) {
                 <?php echo $_SESSION['propertyCreationSuccess']; ?>
             </p>
             <?php unset($_SESSION['propertyCreationSuccess']); ?>
+        <?php } ?>
+        <?php if (isset($_SESSION['propertyUpdateError'])) { ?>
+            <p class="propertyAlert" style="color: red;">
+                <?php echo $_SESSION['propertyCreationError']; ?>
+            </p>
+            <?php unset($_SESSION['propertyUpdateError']); ?>
+        <?php } elseif (isset($_SESSION['propertyUpdateSuccess'])) { ?>
+            <p class="propertyAlert" style="color: green;">
+                <?php echo $_SESSION['propertyUpdateSuccess']; ?>
+            </p>
+            <?php unset($_SESSION['propertyUpdateSuccess']); ?>
         <?php } ?>
         <div class="tableRow">
             <div class="tableCard">

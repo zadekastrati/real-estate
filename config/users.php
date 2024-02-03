@@ -57,6 +57,21 @@ class Users extends Connection
 
         return mysqli_num_rows($result) > 0;
     }
+
+    // In the Users class
+public function deleteUser($user_id)
+{
+    $stmt = $this->connection->prepare("DELETE FROM users WHERE id = ?");
+    $stmt->bind_param("i", $user_id);
+
+    if ($stmt->execute()) {
+        $stmt->close();
+        return true;
+    } else {
+        return false;
+    }
+}
+
 }
 
 ?>

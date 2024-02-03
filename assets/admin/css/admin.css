@@ -169,3 +169,10 @@ nav a:hover {
     border: 1px solid #aaa;
     width: 100%;
 }
+
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #aaa;
+    width: 100%;
+    height: 50px;
+}
