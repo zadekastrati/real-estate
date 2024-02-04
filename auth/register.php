@@ -85,7 +85,6 @@ $conn->close();
                     <div class="signup-image">
                         <figure><img src="../assets/images/signup-image.jpg" alt="sing up image"></figure>
                         <a href="login.php" class="signup-image-link">I am already a member!</a>
-                        <a href="../../users/auth/register.php">Register as user</a>
                     </div>
                 </div>
             </div>
